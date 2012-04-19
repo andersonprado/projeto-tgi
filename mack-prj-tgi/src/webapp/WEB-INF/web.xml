@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Sessao</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<description></description>
+		<display-name>LoginServlet</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ManutencaoGrupo</servlet-name>
+		<servlet-class>br.com.servlet.ManutencaoGrupoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ManutencaoGrupo</servlet-name>
+		<url-pattern>/manutencaoGrupo</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ManutencaoAluno</servlet-name>
+		<servlet-class>br.com.servlet.ManutencaoAlunoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ManutencaoAluno</servlet-name>
+		<url-pattern>/manutencaoAluno</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>InsereEnfaseServlet</servlet-name>
+		<servlet-class>br.com.servlet.InsereEnfaseServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsereEnfaseServlet</servlet-name>
+		<url-pattern>/InsereEnfase</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>InsereGrupoServlet</servlet-name>
+		<servlet-class>br.com.servlet.InsereGrupoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsereGrupoServlet</servlet-name>
+		<url-pattern>/InsereGrupo</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>InsereBancaServlet</servlet-name>
+		<servlet-class>br.com.servlet.InsereBancaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsereBancaServlet</servlet-name>
+		<url-pattern>/InsereBanca</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>AdicionaEmGrupoServlet</servlet-name>
+		<servlet-class>br.com.servlet.AdicionaEmGrupoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdicionaEmGrupoServlet</servlet-name>
+		<url-pattern>/AdicionaEmGrupo</url-pattern>
+	</servlet-mapping>
+
+<servlet>
+		<servlet-name>AlteraDadosAlunoServlet</servlet-name>
+		<servlet-class>br.com.servlet.AlteraDadosAlunoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AlteraDadosAlunoServlet</servlet-name>
+		<url-pattern>/AlteraDadosAluno</url-pattern>
+	</servlet-mapping>
+
+<servlet>
+		<servlet-name>InsereNotasServlet</servlet-name>
+		<servlet-class>br.com.servlet.InsereNotasServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsereNotasServlet</servlet-name>
+		<url-pattern>/InsereNotas</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DataTgi</servlet-name>
+		<servlet-class>br.com.servlet.DataTgiServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DataTgi</servlet-name>
+		<url-pattern>/dataTgi</url-pattern>
+	</servlet-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/pages/404.html</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/pages/500.html</location>
+	</error-page>
+</web-app>
